@@ -18,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         PlayerView playerView = binding.playerView;
-        Player player = 
+        Player player = playerView.getPlayer();
+        
 
     }
 }
