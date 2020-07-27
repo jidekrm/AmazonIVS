@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         player.addListener(new Player.Listener() {
             @Override
             public void onCue(@NonNull Cue cue) {
-                
+
             }
 
             @Override
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onStateChanged(@NonNull Player.State state) {
+                //
 
             }
 
