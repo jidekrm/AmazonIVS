@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String PLAYBACK_URL = "https://ef6df588c19d.us-east-1.playback.live-video.net/api/video/v1/us-east-1.180097409336.channel.ifLQ2wfNWrWY.m3u8";
 
+    Player player;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         PlayerView playerView = binding.playerView;
-        Player player = playerView.getPlayer();
+         player = playerView.getPlayer();
 
         player.load(Uri.parse(PLAYBACK_URL));
         player.addListener(new Player.Listener() {
@@ -42,6 +43,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onStateChanged(@NonNull Player.State state) {
                 //add state changes
+
+                switch (state) {
+                    case BUFFERING:
+                        // player is buffering
+                        break;
+                    case READY:
+                        player.play();
+                        break;
+                    case IDLE:
+                        break;
+                    case PLAYING:
+                        // playback started
+                        break;
+                }
 
 
             }
