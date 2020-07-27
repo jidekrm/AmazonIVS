@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
         PlayerView playerView = binding.playerView;
         Player player = playerView.getPlayer();
+
+        player.load();
         player.addListener(new Player.Listener() {
             @Override
             public void onCue(@NonNull Cue cue) {
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onStateChanged(@NonNull Player.State state) {
                 //add state changes
-                
+
 
             }
 
