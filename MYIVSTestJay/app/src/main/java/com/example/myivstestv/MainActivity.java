@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.amazonaws.ivs.player.PlayerView;
 import com.example.myivstestv.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         ActivityMainBinding binding =  ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        
+        PlayerView playerView = binding.playerView;
 
     }
 }
