@@ -1,2 +1,0 @@
-# AmazonIVS
- Amazon IVS test
