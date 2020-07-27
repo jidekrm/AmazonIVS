@@ -15,6 +15,8 @@ import com.example.myivstestv.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String PLAYBACK_URL = "https://ef6df588c19d.us-east-1.playback.live-video.net/api/video/v1/us-east-1.180097409336.channel.ifLQ2wfNWrWY.m3u8";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         PlayerView playerView = binding.playerView;
         Player player = playerView.getPlayer();
 
-        player.load(Uri.parse("https://ef6df588c19d.us-east-1.playback.live-video.net/api/video/v1/us-east-1.180097409336.channel.ifLQ2wfNWrWY.m3u8"));
+        player.load(Uri.parse(PLAYBACK_URL));
         player.addListener(new Player.Listener() {
             @Override
             public void onCue(@NonNull Cue cue) {
