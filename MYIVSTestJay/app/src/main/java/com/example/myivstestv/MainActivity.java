@@ -36,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onStateChanged(@NonNull Player.State state) {
-                //
+                //add state changes
+                
 
             }
 
