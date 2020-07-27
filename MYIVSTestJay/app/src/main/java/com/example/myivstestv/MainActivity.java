@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
          player = playerView.getPlayer();
 
         player.load(Uri.parse(PLAYBACK_URL));
-        
+
         player.addListener(new Player.Listener() {
             @Override
             public void onCue(@NonNull Cue cue) {
