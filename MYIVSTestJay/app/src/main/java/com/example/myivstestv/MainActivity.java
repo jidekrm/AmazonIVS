@@ -3,6 +3,7 @@ package com.example.myivstestv;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.amazonaws.ivs.player.Cue;
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         PlayerView playerView = binding.playerView;
         Player player = playerView.getPlayer();
 
-        player.load();
+        player.load(Uri.parse("https://ef6df588c19d.us-east-1.playback.live-video.net/api/video/v1/us-east-1.180097409336.channel.ifLQ2wfNWrWY.m3u8"));
         player.addListener(new Player.Listener() {
             @Override
             public void onCue(@NonNull Cue cue) {
